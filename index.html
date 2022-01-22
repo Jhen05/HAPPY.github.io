@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="jquery-3.5.1.min.js"></script>
+    <script src="jquery-3.6.0.min.js"></script>
     <title>翻牌遊戲</title>
     <style>
         div{
@@ -14,14 +14,14 @@
         .upcard{
             width:130px;
             height:130px;
-            
+            -webkit-clip-path:polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
             margin: 51px;
             background-image: url(s.jpg);
             }
         .downcard{
             width:130px;
             height:130px;
-            
+            -webkit-clip-path:polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
             margin: 51px;
             background-image: url(s.jpg);
         }
@@ -56,13 +56,7 @@
         <input type="button" value="" class="downcard" style="color:black;font-size: 30px;">
     </div>
     <input type="button" value="開始翻牌" id="beg" style="font-size: 50px;border:5px rgb(43, 72, 236) double;background-color: rgb(113, 167, 238);" >
-    <form>
-        <a href="xcc.html">
-            <input type="button" style="font-size:50px"  value="前往九宮格">
-        </a>
-    </form>
 </body>
-
 </html>
 <script>
 s=['1','2','3','4','5','6','7','8','9','10'];
@@ -94,7 +88,7 @@ var rightclick=0;
             $(".downcard:eq("+i+")").val(s[i]);
             $(".downcard:eq("+i+")").data("num",s[i]);
         }
-        setTimeout("valClear()",3000);
+        setTimeout("valClear()",12000);
          
     });
 
